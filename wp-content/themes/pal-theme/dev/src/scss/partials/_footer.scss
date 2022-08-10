@@ -1,0 +1,17 @@
+.main-footer {
+  padding: 20px 0;
+}
+.main-footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-footer__logo {
+  max-width: 248px;
+  text-align: center;
+  margin-right: 30px;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}

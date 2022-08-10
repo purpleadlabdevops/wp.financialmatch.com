@@ -1,0 +1,54 @@
+@import 'base/reset';
+@import 'base/bootstrap';
+@import 'base/fonts';
+
+@import 'components/btn';
+@import 'partials/header';
+
+body{
+	overflow: hidden;
+	text-align: center;
+}
+
+.page404{
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	h1{
+		font-weight: bold;
+		font-size: 60px;
+		line-height: 1;
+		color: $text-color;
+		margin-bottom: 60px;
+		text-transform: uppercase;
+
+		span{
+			display: block;
+			font-size: 100px;
+		}
+	}
+	h2{
+		font-weight: bold;
+		font-size: 21px;
+		line-height: 1;
+		color: $text-color;
+		margin-bottom: 45px;
+	}
+	.btn{
+		display: block;
+		text-decoration: none;
+		line-height: 50px;
+		margin-left: auto;
+		margin-right: auto;
+		@media(min-width:1200px){
+			line-height: 60px;
+		}
+	}
+}
