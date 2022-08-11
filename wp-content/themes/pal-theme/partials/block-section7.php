@@ -1,14 +1,12 @@
+<?php if(get_field('section_7_title')): ?>
 <section class="section7">
   <div class="container">
-    <h2 class="section7__title">Ready to Get Up $26,000 per W2 Employee?</h2>
-    <h4 class="section7__subtitle">
-      The ERC Program is currently open, but has been amended in the past. We
-      recommend you claim yours before anything changes.
-    </h4>
+    <h2 class="section7__title"><?php the_field('section_7_title'); ?></h2>
+    <h4 class="section7__subtitle"><?php the_field('section_7_text'); ?></h4>
     <div class="section7__btn-row">
       <a href="#quiz" class="accent-btn" role="button">
         <span class="accent-btn-content-wrapper">
-          <span class="elementor-button-text"><b>Take 60sec Quiz</b></span>
+          <span class="elementor-button-text"><b><?php the_field('section_7_button'); ?></b></span>
           <span class="accent-btn-chevron">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -33,3 +31,4 @@
     </div>
   </div>
 </section>
+<?php endif; ?>

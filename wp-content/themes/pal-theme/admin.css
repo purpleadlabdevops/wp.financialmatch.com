@@ -1,0 +1,160 @@
+.acf-flexible-content .layout .acf-fc-layout-handle {
+  background: #23282d;
+  color: #fff;
+}
+
+.acf-fields>.acf-tab-wrap .acf-tab-group li a {
+  background: #23282d;
+  color: #fff;
+}
+
+.acf-fields>.acf-tab-wrap .acf-tab-group li.active a{
+  color: #23282d;
+}
+
+.acf-fields>.acf-tab-wrap .acf-tab-group li a:hover{
+  color: #23282d;
+}
+
+.acf-tab-group li a{
+  border-color: #23282d;
+}
+
+.acf-flexible-content .layout {
+  border-color: #23282d;
+  background: rgba(35, 40, 45, .2);
+  border-radius: 8px;
+  /*box-shadow: -2px 2px 6px 0 rgba(35, 40, 45, .6);*/
+  overflow: hidden;
+}
+
+.acf-field textarea{
+  height: 200px !important;
+  resize: none;
+  border-color: #23282d;
+  border-radius: 4px;
+}
+
+.acf-field select, #wpbody select,
+.acf-input-prepend, .acf-input-append, .acf-input-wrap,
+.acf-field input[type="text"],
+.acf-field input[type="number"],
+.acf-field input[type="text"]{
+  height: 40px;
+  border-color: #23282d;
+}
+
+.acf-field input[type="text"],
+.acf-field input[type="number"],
+.acf-field input[type="text"]{
+  border-radius: 4px;
+}
+
+.acf-field select, #wpbody select{
+  border-radius: 4px;
+}
+
+.wp-picker-container .wp-color-result.button{
+  height: 40px;
+  border-color: #23282d;
+}
+.wp-picker-container .wp-color-result.button span{
+  height: 38px;
+  line-height: 38px;
+}
+
+.acf-input-prepend, .acf-input-append {
+  line-height: 30px;
+}
+
+.acf-repeater > table{
+  border-color: #23282d;
+}
+
+.acf-table > thead > tr > th{
+  background: rgba(35, 40, 45, 1);
+  color: #fff;
+}
+
+.acf-table > thead > tr > td{
+  background: rgba(35, 40, 45, .2);
+}
+
+.acf-fields .acf-field.acf-accordion {
+  border: none !important;
+  padding: 10px 15px !important;
+  font-size: 16px !important;
+  background: #1d2327;
+  margin: 10px 0 !important;
+  border-radius: 16px;
+}
+
+.acf-fields .acf-field.acf-accordion.-open{
+  background: #2271b1 !important;
+  border-radius: 12px;
+}
+
+.acf-accordion .acf-accordion-title {
+    color: #fff !important;
+}
+
+.acf-field.acf-accordion .acf-accordion-content {
+  background: #fff !important;
+  border-radius: 8px;
+}
+
+.acf-field.acf-accordion .acf-accordion-content>.acf-fields {
+  border: none;
+}
+
+.acf-fields>.acf-field:not(:first-child) {
+  border-top: #1d2327 solid 1px !important;
+}
+
+/*.acf-repeater .acf-row-handle .acf-icon {
+    display: none;
+    position: absolute;
+    top: 0;
+    margin: 4px 0 0 0px;
+}*/
+
+.acf-icon.small, .acf-icon.-small {
+    width: 18px;
+    height: 18px;
+    line-height: 20px;
+    padding: 0;
+    font-size: 18px;
+}
+.acf-icon:before {
+  top: 50% !important;
+  transform: translate(0, -50%) !important;
+}
+
+.acf-field-62f3a15da56c0 > .acf-input .acf-repeater .acf-row > td{
+  border-top-color: #1d2327;
+  border-top-width: 5px;
+}
+.acf-field-62f3a15da56c0 > .acf-input .acf-repeater .acf-row > td .acf-field td{
+  border-top-color: #1d2327;
+  border-top-width: 1px;
+}
+.acf-field-62f3a15da56c0 > .acf-input .acf-repeater .acf-row > .acf-row-handle.order{
+  background: #2271b1;
+  color: #fff;
+}
+.acf-field-62f3a15da56c0 > .acf-input .acf-repeater .acf-row .acf-row > .acf-row-handle.order{
+  background: #1d2327;
+  border-top-color: #fff;
+  color: #fff;
+}
+
+/*.acf-field-62f3a15da56c0 > .acf-input .acf-repeater .acf-row > td td{
+  border-top-color: #1d2327;
+  border-top-width: 1px;
+}*/
+/*.acf-field-62f3a15da56c0 > .acf-input .acf-repeater .acf-row > .acf-row-handle.order,
+.acf-field-62f3a15da56c0 > .acf-input .acf-repeater .acf-row > .acf-row-handle.order{
+  background: #1d2327;
+  color: #fff;
+  font-size: 14px;
+}*/

@@ -17,7 +17,7 @@
   &:not(:first-child) {
     margin-top: 60px;
   }
-  &.reverse {
+  &.reverse, &:nth-child(2n) {
     .section3__grid-dscr-col {
       order: -1;
       padding: 15px 30px 15px 80px;
@@ -45,6 +45,11 @@
 }
 .section3__grid-text {
   font-size: 18px;
+  span{
+    color: #c1ab16;
+    font-weight: 700;
+    text-decoration: underline;
+  }
 }
 .section3__grid-img-col {
   padding: 0px 15px 0px 0px;

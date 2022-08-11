@@ -1,22 +1,8 @@
 <?php
 
-// default wp variables
-define('ROOT', get_template_directory_uri());
-define('IMG', ROOT . '/img');
-define('VIDEO', ROOT . '/video');
-
-// replace jquery
-function replace_core_jquery_version() {
-	wp_deregister_script( 'jquery' );
-	wp_register_script( 'jquery', "https://code.jquery.com/jquery-3.1.1.min.js", array(), '3.1.1' );
-}
-add_action( 'wp_enqueue_scripts', 'replace_core_jquery_version' );
-
-// wp includes
-// include('include/clear.php');
-
-// support wp menu
-add_theme_support( 'menus' );
+// Includes
+include('include/settings.php');
+include('include/clear.php');
 
 // include wp scripts
 function front_scripts() {

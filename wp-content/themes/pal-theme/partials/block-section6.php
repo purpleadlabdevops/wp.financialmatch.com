@@ -1,29 +1,15 @@
+<?php if( have_rows('section_6') ): ?>
 <section class="section6">
   <div class="container">
-    <h2 class="section6__title">How It Works</h2>
+    <h2 class="section6__title"><?php the_field('section_6_title'); ?></h2>
     <div class="section6__steps">
+      <?php $i = 0; while( have_rows('section_6') ): the_row(); $i++; ?>
       <div class="section6__step">
-        <div class="section6__step-num">1</div>
-        <h4 class="section6__step-title">Take the Qualification Quiz</h4>
+        <div class="section6__step-num"><?php echo $i; ?></div>
+        <h4 class="section6__step-title"><?php the_sub_field('title'); ?></h4>
       </div>
-      <div class="section6__step">
-        <div class="section6__step-num">2</div>
-        <h4 class="section6__step-title">
-          Fill Out Application (Online or Phone)
-        </h4>
-      </div>
-      <div class="section6__step">
-        <div class="section6__step-num">3</div>
-        <h4 class="section6__step-title">
-          Work With Our Team to Get Docs and Info
-        </h4>
-      </div>
-      <div class="section6__step">
-        <div class="section6__step-num">4</div>
-        <h4 class="section6__step-title">
-          Processing, Submission and Payment from IRS
-        </h4>
-      </div>
+      <?php endwhile; ?>
     </div>
   </div>
 </section>
+<?php endif; ?>
