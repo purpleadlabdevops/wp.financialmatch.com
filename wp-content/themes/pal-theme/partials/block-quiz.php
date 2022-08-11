@@ -4,7 +4,7 @@
 
   <?php if( have_rows('questions') ): ?>
     <?php $i = 0; while( have_rows('questions') ): the_row(); $i++; ?>
-    <div class="step" v-for="(item, i) in quiz" v-show="step === i && !notQualify">
+    <div class="step step-<?php echo $i; ?><?php if($i === 1): ?> step-active<?php endif; ?>">
       <h2><?php the_sub_field('question'); ?></h2>
 
       <?php if($i === 1): ?>
@@ -16,16 +16,10 @@
       <?php endif; ?>
 
       <?php if(get_sub_field('type') === 'number'): ?>
-      <div class="form-options" v-if="item.options === 'Number'">
-        <input
-          type="number"
-          min="1"
-          max="<?php the_sub_field('max_number'); ?>"
-          placeholder="Enter number"
-          id="Employ QTA"
-        />
+      <div class="form-options">
+        <input type="number" min="1" max="<?php the_sub_field('max_number'); ?>" placeholder="Enter number" data-id="Employ QTA" id="maxNumber" />
         <div class="buttons">
-          <button @click.prevent="chooseAnswer(number, i)" class="yellow">
+          <button class="yellow chooseAnswer" data-number data-q="<?php the_sub_field('question'); ?>" data-a="#maxNumber" data-i="<?php echo $i; ?>" >
             <?php the_sub_field('button'); ?>
           </button>
           <button class="back" @click.prevent="stepBack">
@@ -34,10 +28,10 @@
         </div>
       </div>
       <?php else: ?>
-      <div class="form-options" v-else>
+      <div class="form-options">
         <?php if( have_rows('answers') ): ?>
           <?php while( have_rows('answers') ): the_row(); ?>
-            <button v-for="option in item.options" @click.prevent="chooseAnswer(option, i)">
+            <button class="chooseAnswer" data-q="<?php the_sub_field('question'); ?>" data-a="<?php the_sub_field('text'); ?>" data-i="<?php echo $i; ?>">
               <?php the_sub_field('text'); ?>
             </button>
           <?php endwhile; ?>
@@ -50,7 +44,7 @@
   <?php endif; ?>
 
   <?php if( have_rows('form_fields') ): ?>
-  <div class="step" v-if="step === quiz.length && !notQualify">
+  <div class="step step-<?php echo count(get_field('questions')) + 1; ?>">
     <h2>Enter info below to get your results.</h2>
     <?php while( have_rows('form_fields') ): the_row(); ?>
       <?php if(get_sub_field('type') === 'textarea'): ?>
@@ -86,7 +80,7 @@
   </div>
   <?php endif; ?>
 
-  <div class="step" v-if="notQualify">
+  <div class="step step-not">
     <h2>You Do Not Qualify for ERC</h2>
     <p>
       Unfortunately based on your answers, it appears that you do not qualify
