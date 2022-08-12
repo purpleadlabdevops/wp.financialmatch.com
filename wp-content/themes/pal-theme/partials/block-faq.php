@@ -1,5 +1,5 @@
 
-<section class="faq">
+<section class="faq faq1">
   <div class="faq__container">
     <h3 class="faq__title">Frequently Asked Questions</h3>
     <ul class="faq__nav">
