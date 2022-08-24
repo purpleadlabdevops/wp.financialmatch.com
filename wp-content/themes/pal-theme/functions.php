@@ -3,6 +3,7 @@
 // Includes
 include('include/settings.php');
 include('include/clear.php');
+include('include/quizSubmit.php');
 
 // include wp scripts
 function front_scripts() {
@@ -21,3 +22,15 @@ add_action( 'wp_enqueue_scripts', 'front_scripts' );
 if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page();
 }
+
+function front_variables(){
+	$affid = isset($_GET["affid"]) ? $_GET["affid"] : false;
+	wp_localize_script( 'scripts', 'data',
+		array(
+			'ajax' => admin_url('admin-ajax.php'),
+			'theme' => get_template_directory_uri(),
+			'affid' => $affid
+		)
+	);
+}
+add_action( 'wp_enqueue_scripts', 'front_variables' );

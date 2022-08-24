@@ -1,11 +1,11 @@
 <div class="top__quiz">
-  <form @submit.prevent="submit" class="form">
+  <form id="quizForm" class="form">
     <div class="form-progress" :style="`width: ${((step + 1) * 100) / (quiz.length + 1)}%`"></div>
 
     <?php if( have_rows('questions') ): ?>
-      <?php $i = 0; while( have_rows('questions') ): the_row(); $i++; ?>
+      <?php $i = 0; while( have_rows('questions') ): the_row(); $i++; $question = get_sub_field('question'); ?>
       <div class="step step-<?php echo $i; ?><?php if($i === 1): ?> step-active<?php endif; ?>">
-        <h2><?php the_sub_field('question'); ?></h2>
+        <h2><?php echo $question; ?></h2>
 
         <?php if($i === 1): ?>
         <h3>
@@ -17,9 +17,9 @@
 
         <?php if(get_sub_field('type') === 'number'): ?>
         <div class="form-options">
-          <input type="number" min="1" max="<?php the_sub_field('max_number'); ?>" placeholder="Enter number" data-id="Employ QTA" id="maxNumber" />
+          <input type="number" value="1" min="1" max="<?php the_sub_field('max_number'); ?>" placeholder="Enter number" data-id="Employ QTA" id="maxNumber" name="data<?php echo $i; ?>" />
           <div class="buttons">
-            <button class="yellow chooseAnswer" data-number data-q="<?php the_sub_field('question'); ?>" data-a="#maxNumber" data-i="<?php echo $i; ?>" >
+            <button class="yellow chooseAnswer" data-number="true" data-q="<?php echo $question; ?>" data-a="#maxNumber" data-i="<?php echo $i; ?>" >
               <?php the_sub_field('button'); ?>
             </button>
             <button class="back" @click.prevent="stepBack">
@@ -31,7 +31,7 @@
         <div class="form-options">
           <?php if( have_rows('answers') ): ?>
             <?php while( have_rows('answers') ): the_row(); ?>
-              <button class="chooseAnswer" data-q="<?php the_sub_field('question'); ?>" data-a="<?php the_sub_field('text'); ?>" data-i="<?php echo $i; ?>">
+              <button class="chooseAnswer" data-q="<?php echo $question; ?>" data-a="<?php the_sub_field('text'); ?>" data-i="<?php echo $i; ?>">
                 <?php the_sub_field('text'); ?>
               </button>
             <?php endwhile; ?>
@@ -88,11 +88,27 @@
       </p>
     </div>
 
-    <input
-      ref="leadid_token"
-      id="leadid_token"
-      name="universal_leadid"
-      type="hidden"
-    />
+    <input id="leadid_token" name="universal_leadid" type="hidden" />
+    <div class="loader"></div>
   </form>
 </div>
+
+<script src="<?php echo ROOT; ?>/js/leadId.js" id="LeadiDscript"></script>
+
+<?php
+/*
+$ch = curl_init('http://httpbin.org/post');
+
+$fields = ['name' => 'John Doe', 'occupation' => 'gardener'];
+$options = [CURLOPT_POST => true, CURLOPT_POSTFIELDS => $fields, CURLOPT_RETURNTRANSFER => true];
+
+curl_setopt_array($ch, $options);
+
+$data = curl_exec($ch);
+
+curl_close($ch);
+
+echo $data;
+
+*/
+?>
