@@ -7,6 +7,7 @@ include('include/quizSubmit.php');
 
 // include wp scripts
 function front_scripts() {
+	wp_enqueue_script( 'everflow', 'https://www.f98mmtrk.com/scripts/sdk/everflow.js', null, null, true);
 // Index page
 	if( is_page_template( 'index.php' ) ){
 		wp_enqueue_style( 'styles', get_template_directory_uri().'/css/styles-index.css');

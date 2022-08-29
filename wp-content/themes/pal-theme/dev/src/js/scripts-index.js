@@ -1,5 +1,4 @@
 //= partials/faq.js
-//= partials/quiz.js
 
 const phoneNumberInput = e => {
   let arr = e.target.value.replace(/[^\dA-Z]/g, '').replace(/[\s]/g, '').split('')
