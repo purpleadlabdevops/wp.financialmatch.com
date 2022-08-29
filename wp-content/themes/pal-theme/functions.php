@@ -12,6 +12,11 @@ function front_scripts() {
 		wp_enqueue_style( 'styles', get_template_directory_uri().'/css/styles-index.css');
 		wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts-index.js', false, false, 'in_footer');
 	}
+// Thank you page
+	if( is_page_template( 'templates/thankyou.php' ) ){
+		wp_enqueue_style( 'styles', get_template_directory_uri().'/css/styles-thankyou.css');
+		wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts-thankyou.js', false, false, 'in_footer');
+	}
 	// 	wp_enqueue_script( 'paypal-sdk', 'https://www.paypal.com/sdk/js?client-id=ASwa9YxGps_Ib6-23OkFDe5DLDJo7DtTfnwMxkxC2297bVWcHm5da9I7aJstDqcpdcOhPreh_mFgjnnG', null, null, true);
 	// 	wp_enqueue_script( 'klaviyo', 'https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=NB8RST', false, false, 'in_footer');
 	// 	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts-v5.js',  array('klaviyo', 'paypal-sdk'), false, 'in_footer');

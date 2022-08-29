@@ -8,7 +8,7 @@ get_header(); ?>
 	<div class="container">
 		<h1>Error <span>404</span></h1>
 		<h2>Page not found!!!</h2>
-		<a href="<?php echo home_url(); ?>/v5" class="btn">Visit our product</a>
+		<a href="<?php echo home_url(); ?>" class="btn">Back to home page</a>
 	</div>
 </section>
 

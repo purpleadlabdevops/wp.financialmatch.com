@@ -1,0 +1,81 @@
+@import 'base/vars';
+@import 'base/mixins';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+body {
+  margin: 0;
+}
+.container {
+  max-width: 1440px;
+  padding: 0 20px;
+  width: 100%;
+  margin: 0 auto;
+}
+.gold {
+  color: #c1ab16;
+}
+.accent-btn {
+  box-shadow: 8px 8px 0px #c9a828;
+  transition: 0.3s ease all;
+  font-size: 24px;
+  font-weight: 400;
+  background-color: #eac73c;
+  padding: 20px 40px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  line-height: 1;
+  color: #fff;
+  fill: #fff;
+  text-align: center;
+  &:hover {
+    box-shadow: 1px 1px 0px #c9a828;
+  }
+}
+.accent-btn-content-wrapper {
+  display: flex;
+  align-items: center;
+}
+.accent-btn-chevron {
+  padding-left: 12px;
+  animation: bounce_h 3s infinite;
+  svg {
+    display: block;
+  }
+}
+@keyframes bounce_h {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(-8px);
+  }
+  60% {
+    transform: translateX(-4px);
+  }
+}
+
+// blocks
+@import 'partials/header';
+@import 'partials/top';
+@import 'partials/form';
+@import 'partials/section1';
+@import 'partials/section2';
+@import 'partials/section3';
+@import 'partials/section4';
+@import 'partials/section5';
+@import 'partials/section6';
+@import 'partials/section7';
+@import 'partials/faq';
+@import 'partials/footer';
