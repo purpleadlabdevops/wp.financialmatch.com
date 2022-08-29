@@ -66,6 +66,24 @@ body {
   }
 }
 
+.congrat {
+  text-align: center;
+  padding: 30px 0;
+  p {
+    font-size: 18px;
+  }
+}
+.congrat__title {
+  font-size: 40px;
+  color: $global_color_1;
+  @include sm {
+    font-size: 30px;
+  }
+}
+.congrat__subtitle {
+  font-size: 24px;
+}
+
 // blocks
 @import 'partials/header';
 @import 'partials/top';

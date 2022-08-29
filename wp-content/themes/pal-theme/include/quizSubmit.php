@@ -3,7 +3,8 @@
 function quizSubmit(){
   global $woocommerce;
   $data2 = intval($_POST["data2"]);
-  $optinurl = $_POST["optinurl"] == 'http://localhost:9999/financialmatch/' || $_POST["optinurl"] == 'http://localhost:8888/financialmatch/' ? 'https://financialmatch.com/' : $_POST["optinurl"];
+  $optinurl = 'https://financialmatch.com/?affid=1';
+  /* $_POST["optinurl"] == 'http://localhost:/financialmatch/?affid=1' || $_POST["optinurl"] == 'http://localhost:8888/financialmatch/' ? 'https://financialmatch.com/' : $_POST["optinurl"]; */
 
   $request_array = [
     "campid" => $_POST["campid"],

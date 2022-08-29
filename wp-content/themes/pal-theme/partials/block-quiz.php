@@ -277,7 +277,7 @@ document.getElementById('quizForm').addEventListener('submit', e => {
             })
             .then(() => {
               console.log('step 2')
-              window.location.href = '<?php the_permalink(132); ?>'
+              window.location.href = `<?php the_permalink(132); ?>?r=${quiz[1].answer}`
             })
         }
       }

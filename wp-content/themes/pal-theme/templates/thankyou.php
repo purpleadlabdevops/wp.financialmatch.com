@@ -6,8 +6,7 @@ get_header();
 ?>
 
 <main>
-  <?php get_template_part( 'partials/block', 'top' ); ?>
-  <?php // get_template_part( 'partials/block', 'ty-congrat' ); ?>
+  <?php get_template_part( 'partials/block', 'congrat' ); ?>
   <?php get_template_part( 'partials/block', 'section1' ); ?>
   <?php get_template_part( 'partials/block', 'section2' ); ?>
   <?php get_template_part( 'partials/block', 'section3' ); ?>
